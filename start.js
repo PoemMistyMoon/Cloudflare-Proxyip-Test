@@ -58,7 +58,7 @@ const WEBSOCKET_TIMEOUT = 3000; // WebSocket 连接超时（毫秒）
 const CDN_TRACE_TIMEOUT = 3000; // CDN Trace 请求超时（毫秒）
 
 // 功能开关配置
-const DISABLE_WEBSOCKET = process.env.DISABLE_WEBSOCKET === 'true'; // 禁用 WebSocket 检测（用于云平台）
+const DISABLE_WEBSOCKET = process.env.DISABLE_WEBSOCKET === 'false'; // 禁用 WebSocket 检测（用于云平台）
 const DISABLE_CDN_TRACE = process.env.DISABLE_CDN_TRACE === 'false'; // 禁用 CDN Trace 检测
 
 // DNS 解析配置
@@ -66,7 +66,7 @@ const DNS_MAX_RECURSION_DEPTH = 10; // CNAME 递归解析最大深度
 
 // 默认值配置
 const DEFAULT_PORT = 443; // 默认端口
-const DEFAULT_HOST = "speed.cloudflare.com"; // 默认 Host (SNI)
+const DEFAULT_HOST = "n.ccv.cc.cd"; // 默认 Host (SNI)
 const DEFAULT_WS_PATH = "/"; // 默认 WebSocket 路径
 
 // 内存管理配置
@@ -2722,5 +2722,6 @@ function startServer() {
     process.exit(1);
   }
 }
+
 
 startServer();
