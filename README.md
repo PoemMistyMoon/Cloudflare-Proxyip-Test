@@ -1,9 +1,18 @@
 # Cloudflare IP 检测工具
 
-本项目基于 **[cf-proxyip-test](https://github.com/mountain787/cf-proxyip-test)** 二次修改而来，在此感谢！修改部分内容并且美化前端，同时适配竖屏界面，项目为前后端一体的单文件实现，开箱即用。
+本项目基于 **[cf-proxyip-test](https://github.com/mountain787/cf-proxyip-test)** 二次修改而来，在此感谢！
+
+主要变化：
+
+- 美化前端
+- 适配竖屏界面
+- 部分修改
+- 新增**worker.js**-部署后可借助项目api批量检测，轻松高效
 
 ---
 **演示网站:[Cloudflare IP 远程检测工具](https://ipt.ssc.de5.net/iptest)**
+
+**演示网站:[CloudflareIP 批量检测工具](https://iptt.ssc.de5.net)**
 
 **注意!**  **演示网站不保证可用性!**
 
@@ -28,6 +37,8 @@
 
 确保你的服务器已安装 **Node.js 18.0.0 或更高版本**。
 
+**worker.js** 直接在 Cloudflare 部署
+
 ```bash
 #拉取项目并且进入项目目录
 
@@ -45,8 +56,6 @@ node start.js
 ```
 http://localhost:8888
 ```
-
----
 
 ## API 简述
 
