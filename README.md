@@ -92,9 +92,8 @@ const MAX_REQUESTS_PER_IP = 60;  // 单 IP 请求上限
 
 ## 致谢
 
-- [cf-proxyip-test](https://github.com/mountain787/cf-proxyip-test)
-- [GeoLite2](https://www.maxmind.com/en/geoip2-databases)
-
+- [cf-proxyip-test](https://github.com/mountain787/cf-proxyip-test) 项目原仓库
+- [Cmliu](https://github.com/cmliu) 提供丰富可用的proxyip
 
 ---
 
