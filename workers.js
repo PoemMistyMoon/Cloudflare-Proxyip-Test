@@ -187,11 +187,12 @@ async function handleRequest(request) {
   
                   const promise = (async () => {
                       try {
-                          const url = new URL(`https://${apiDomain}/api`);
+                          const url = new URL('https://' + apiDomain + '/api');
                           url.searchParams.set('ip', targetIp);
                           url.searchParams.set('port', targetPort);
                           url.searchParams.set('host', host);
                           url.searchParams.set('wsPath', wsPath);
+
                           const res = await fetch(url.toString());
                           const data = await res.json();
                           
