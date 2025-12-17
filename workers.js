@@ -187,8 +187,12 @@ async function handleRequest(request) {
   
                   const promise = (async () => {
                       try {
-                          const url = \`https://\${apiDomain}/api?ip=\${targetIp}&port=\${targetPort}&host=\${host}&wsPath=\${wsPath}\`;
-                          const res = await fetch(url);
+                          const url = new URL(`https://${apiDomain}/api`);
+                          url.searchParams.set('ip', targetIp);
+                          url.searchParams.set('port', targetPort);
+                          url.searchParams.set('host', host);
+                          url.searchParams.set('wsPath', wsPath);
+                          const res = await fetch(url.toString());
                           const data = await res.json();
                           
                           // 适配多 IP 逻辑
